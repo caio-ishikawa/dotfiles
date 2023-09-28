@@ -1,0 +1,29 @@
+{
+  	"svelte.enable-ts-plugin": true,
+	"clangd.fallbackFlags" : ["-xc"],
+  	"languageserver": {
+    	"haskell": {
+      		"command": "haskell-language-server-wrapper",
+      		"args": [
+        		"--lsp"
+      		],
+      		"rootPatterns": [
+        		".stack.yaml",
+        		".hie-bios",
+        		"BUILD.bazel",
+        		"cabal.config",
+        		"package.yaml"
+      		],
+      		"filetypes": [
+        		"hs",
+        		"lhs",
+        		"haskell"
+      		]
+    	},
+		"ocaml-lsp": {
+			"command": "opam",
+			"args": ["config", "exec", "--", "ocamllsp"],
+			"filetypes": ["ocaml", "reason"]
+		}
+  	}
+}
